@@ -1,13 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Angular16ProjectBootstrap</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <title>Angular16ProjectBootstrap</title>
+    <meta content="Angular16ProjectBootstrap" name="application-name" />
+    <meta content="Angular16ProjectBootstrap by DeeJayy" name="description" />
+    <meta charset="utf-8" />
+    <meta lang="en-US" />
+    <base href="/" />
+    <meta content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" name="viewport" />
+    <style>
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      noscript,
+      #spinner {
+        background: white linear-gradient(-30deg, #00204060, #00204020);
+        color: #000000a0;
+        font: 900 4vh Arial, Helvetica, sans-serif;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 0 6vw;
+      }
+      noscript {
+        display: flex;
+      }
+      noscript div,
+      #spinner div {
+        animation: 3s fadeIn forwards;
+        visibility: hidden;
+      }
+      #spinner div {
+        animation-delay: 2s;
+      }
+      @media (prefers-color-scheme: dark) {
+        noscript,
+        #spinner {
+          background: black linear-gradient(-30deg, #002040e0, #00204080);
+          color: #ffffffa0;
+        }
+      }
+    </style>
+    <link href="/favicon.svg" rel="icon" type="image/x-icon" />
+    <link href="/favicon.svg" rel="shortcut icon" />
+    <link href="/manifest.json" rel="manifest" />
+  </head>
+
+  <body class="mat-typography mat-app-background">
+    <app-root>
+      <div hidden id="spinner">
+        <div>Loading...</div>
+      </div>
+    </app-root>
+    <noscript>
+      <div>Javascript must be enabled to use this application.</div>
+    </noscript>
+    <script>
+      const spinner = document.getElementById('spinner');
+      spinner.removeAttribute('hidden');
+      spinner.style.display = 'flex';
+    </script>
+  </body>
 </html>

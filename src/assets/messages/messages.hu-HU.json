@@ -1,0 +1,7 @@
+{
+  "demo/demo/introduction": "Bevezető",
+  "demo/demo/intro-line-1": "Ez a demo oldala az Angular Bootstrap alkalmazásnak.",
+  "demo/demo/intro-line-2": "A füleken végig tudod kattintgatni, hogy milyen előre beállított funkciók vannak és hogyan működnek. A kódot pedig tudod használni referenciának.",
+  "demo/demo/intro-line-3": "A demo eltávolításához csak simán töröld le az /app/feature/demo könyvtárat és vedd ki a routingból a DEMO_ROUTES bejegyzést.",
+  "demo/demo/code-lang-token": "Ez a token kódban van definiálva."
+}

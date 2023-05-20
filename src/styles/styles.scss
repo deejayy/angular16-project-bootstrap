@@ -1,0 +1,52 @@
+@use 'sass:map';
+@import 'app-theme';
+
+body div {
+  cursor: default;
+}
+
+a {
+  color: map.get($foreground-light, 'base');
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: map.get($foreground-dark, 'base');
+  }
+}
+
+* {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $theme-color;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+$autofill-transition-speed: calc(60 * 60 * 24s);
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: black;
+  transition: background-color $autofill-transition-speed ease-in-out $autofill-transition-speed !important;
+}

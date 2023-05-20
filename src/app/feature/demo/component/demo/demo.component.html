@@ -1,0 +1,216 @@
+<mat-tab-group class="tabs" color="accent" mat-align-tabs="start" mat-stretch-tabs="false">
+  <mat-tab label="Introduction" i18n-label="@@demo/demo/introduction">
+    <div class="tab-content">
+      <p i18n="@@demo/demo/intro-line-1">This is the demo page for the Angular Bootstrap application.</p>
+      <p i18n="@@demo/demo/intro-line-2">In the tabs, you can check how the embedded features are working. Check the code for reference implementation.</p>
+      <p i18n="@@demo/demo/intro-line-3">
+        To remove this page, simply delete /app/feature/demo folder completely and remove the DEMO_ROUTES reference from
+        app-routing.module.ts.
+      </p>
+    </div>
+  </mat-tab>
+  <mat-tab label="State management (NGRX)">
+    <div class="tab-content">
+      <p>
+        <button color="accent" mat-flat-button (click)="updateState()">Now</button>
+        {{ date$ | async }}
+      </p>
+    </div>
+  </mat-tab>
+  <mat-tab label="Material">
+    <div class="tab-content">
+      <section>
+        <div class="example-label">Basic</div>
+        <div class="example-button-row">
+          <button mat-button>Basic</button>
+          <button color="primary" mat-button>Primary</button>
+          <button color="accent" mat-button>Accent</button>
+          <button color="warn" mat-button>Warn</button>
+          <button disabled mat-button>Disabled</button>
+          <a href="https://cv.co.hu/" mat-button target="_blank">Link</a>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">Raised</div>
+        <div class="example-button-row">
+          <button mat-raised-button>Basic</button>
+          <button color="primary" mat-raised-button>Primary</button>
+          <button color="accent" mat-raised-button>Accent</button>
+          <button color="warn" mat-raised-button>Warn</button>
+          <button disabled mat-raised-button>Disabled</button>
+          <a href="https://cv.co.hu/" mat-raised-button target="_blank">Link</a>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">Stroked</div>
+        <div class="example-button-row">
+          <button mat-stroked-button>Basic</button>
+          <button color="primary" mat-stroked-button>Primary</button>
+          <button color="accent" mat-stroked-button>Accent</button>
+          <button color="warn" mat-stroked-button>Warn</button>
+          <button disabled mat-stroked-button>Disabled</button>
+          <a href="https://cv.co.hu/" mat-stroked-button target="_blank">Link</a>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">Flat</div>
+        <div class="example-button-row">
+          <button mat-flat-button>Basic</button>
+          <button color="primary" mat-flat-button>Primary</button>
+          <button color="accent" mat-flat-button>Accent</button>
+          <button color="warn" mat-flat-button>Warn</button>
+          <button disabled mat-flat-button>Disabled</button>
+          <a href="https://cv.co.hu/" mat-flat-button target="_blank">Link</a>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">Icon</div>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <button aria-label="Example icon button with a vertical three dot icon" mat-icon-button>
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <button aria-label="Example icon button with a home icon" color="primary" mat-icon-button>
+              <mat-icon>home</mat-icon>
+            </button>
+            <button aria-label="Example icon button with a menu icon" color="accent" mat-icon-button>
+              <mat-icon>menu</mat-icon>
+            </button>
+            <button aria-label="Example icon button with a heart icon" color="warn" mat-icon-button>
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <button aria-label="Example icon button with a open in new tab icon" disabled mat-icon-button>
+              <mat-icon>open_in_new</mat-icon>
+            </button>
+          </div>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">FAB</div>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <div class="example-button-container">
+              <button aria-label="Example icon button with a delete icon" color="primary" mat-fab>
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button aria-label="Example icon button with a bookmark icon" color="accent" mat-fab>
+                <mat-icon>bookmark</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button aria-label="Example icon button with a home icon" color="warn" mat-fab>
+                <mat-icon>home</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button aria-label="Example icon button with a heart icon" disabled mat-fab>
+                <mat-icon>favorite</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">Mini FAB</div>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <div class="example-button-container">
+              <button aria-label="Example icon button with a menu icon" color="primary" mat-mini-fab>
+                <mat-icon>menu</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button aria-label="Example icon button with a plus one icon" color="accent" mat-mini-fab>
+                <mat-icon>plus_one</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button aria-label="Example icon button with a filter list icon" color="warn" mat-mini-fab>
+                <mat-icon>filter_list</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button aria-label="Example icon button with a home icon" disabled mat-mini-fab>
+                <mat-icon>home</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </mat-tab>
+  <mat-tab label="Api caller & reactive config">
+    <div class="tab-content">
+      <button color="primary" mat-flat-button (click)="fetchApi()">Fetch API</button>
+
+      <table mat-table [dataSource]="data$">
+        <ng-container matColumnDef="id">
+          <th *matHeaderCellDef mat-header-cell>ID</th>
+          <td *matCellDef="let element" mat-cell>{{ element.id }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th *matHeaderCellDef mat-header-cell>Name</th>
+          <td *matCellDef="let element" mat-cell>{{ element.name }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="username">
+          <th *matHeaderCellDef mat-header-cell>Username</th>
+          <td *matCellDef="let element" mat-cell>{{ element.username }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th *matHeaderCellDef mat-header-cell>E-mail</th>
+          <td *matCellDef="let element" mat-cell>{{ element.email }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="address">
+          <th *matHeaderCellDef mat-header-cell>Address</th>
+          <td *matCellDef="let element" mat-cell>{{ element.address.city }}, {{ element.address.street }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <th *matHeaderCellDef mat-header-cell>Phone</th>
+          <td *matCellDef="let element" mat-cell>{{ element.phone }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="website">
+          <th *matHeaderCellDef mat-header-cell>Website</th>
+          <td *matCellDef="let element" mat-cell>{{ element.website }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="company">
+          <th *matHeaderCellDef mat-header-cell>Company</th>
+          <td *matCellDef="let element" mat-cell>{{ element.company.name }}</td>
+        </ng-container>
+
+        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns" mat-row></tr>
+      </table>
+    </div>
+  </mat-tab>
+  <mat-tab label="Mixins">
+    <div class="tab-content">
+      <h1 class="smart-sized-title">smart-scale and mq test</h1>
+      <p>(resize the window to see how these work)</p>
+    </div>
+  </mat-tab>
+  <mat-tab label="Runtime localizer">
+    <div class="tab-content">
+      <button color="primary" mat-flat-button (click)="switchLang('hu-HU')">Switch to Hungarian (hu-HU)</button>
+      <button mat-flat-button (click)="switchLang('en-US')">Switch to English (en-US)</button>
+      <p i18n="@@deliberately-missing-token">
+        This is a deliberately missing languge token, check dev console to observe what you can expect when a token is missing (e.g. typo, forget, etc).
+      </p>
+      <p>{{ codeLangToken }}</p>
+    </div>
+  </mat-tab>
+</mat-tab-group>

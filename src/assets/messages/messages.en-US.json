@@ -1,0 +1,7 @@
+{
+  "demo/demo/introduction": "Introduction",
+  "demo/demo/intro-line-1": "This is the demo page for the Angular Bootstrap application.",
+  "demo/demo/intro-line-2": "In the tabs, you can check how the embedded features are working. Check the code for reference implementation.",
+  "demo/demo/intro-line-3": "To remove this page, simply delete /app/feature/demo folder completely and remove the DEMO_ROUTES reference from app-routing.module.ts.",
+  "demo/demo/code-lang-token": "This token is coming from code."
+}

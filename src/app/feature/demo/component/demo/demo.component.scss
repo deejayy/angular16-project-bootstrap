@@ -1,0 +1,57 @@
+@use 'sass:map';
+@import 'app-theme';
+
+.smart-sized-title {
+  font-size: smart-scale(50, 100, map.get($breakpoints, tablet-wide), 1920);
+
+  @include mq(tablet-wide) {
+    font-size: smart-scale(40, 50, 320, map.get($breakpoints, tablet-wide));
+  }
+}
+
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.tabs {
+  margin: 20px;
+  height: calc(100% - 100px);
+
+  .tab-content {
+    padding: 20px 0;
+  }
+
+  ::ng-deep {
+    .mat-mdc-tab-body-wrapper {
+      height: 100%;
+    }
+  }
+}

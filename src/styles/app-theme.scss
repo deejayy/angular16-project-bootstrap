@@ -1,0 +1,125 @@
+@use 'sass:map';
+@import 'mixins';
+
+$font-color: black;
+
+$theme-color: hsl(209deg, 53%, 50%);
+$theme-hue: 209deg;
+$theme-saturation: 53%;
+
+$alt-color: hsl(81deg, 60%, 50%);
+$alt-hue: 81deg;
+$alt-saturation: 60%;
+
+$grey-saturation: 5%;
+
+$theme: (
+   50: hsl($theme-hue, $theme-saturation, 95%),
+  100: hsl($theme-hue, $theme-saturation, 85%),
+  200: hsl($theme-hue, $theme-saturation, 75%),
+  300: hsl($theme-hue, $theme-saturation, 65%),
+  400: hsl($theme-hue, $theme-saturation, 55%),
+  500: hsl($theme-hue, $theme-saturation, 50%),
+  600: hsl($theme-hue, $theme-saturation, 45%),
+  700: hsl($theme-hue, $theme-saturation, 40%),
+  800: hsl($theme-hue, $theme-saturation, 35%),
+  900: hsl($theme-hue, $theme-saturation, 30%),
+);
+
+$alt: (
+   50: hsl($alt-hue, $alt-saturation, 95%),
+  100: hsl($alt-hue, $alt-saturation, 85%),
+  200: hsl($alt-hue, $alt-saturation, 75%),
+  300: hsl($alt-hue, $alt-saturation, 65%),
+  400: hsl($alt-hue, $alt-saturation, 55%),
+  500: hsl($alt-hue, $alt-saturation, 50%),
+  600: hsl($alt-hue, $alt-saturation, 45%),
+  700: hsl($alt-hue, $alt-saturation, 40%),
+  800: hsl($alt-hue, $alt-saturation, 35%),
+  900: hsl($alt-hue, $alt-saturation, 30%),
+);
+
+$grey-palette: (
+   50: hsl($theme-hue, $grey-saturation, 98%),
+  100: hsl($theme-hue, $grey-saturation, 96%),
+  200: hsl($theme-hue, $grey-saturation, 93%),
+  300: hsl($theme-hue, $grey-saturation, 88%),
+  400: hsl($theme-hue, $grey-saturation, 74%),
+  500: hsl($theme-hue, $grey-saturation, 62%),
+  600: hsl($theme-hue, $grey-saturation, 46%),
+  700: hsl($theme-hue, $grey-saturation, 38%),
+  800: hsl($theme-hue, $grey-saturation, 26%),
+  900: hsl($theme-hue, $grey-saturation, 13%),
+);
+
+$background-light: (
+  status-bar:               map.get($grey-palette, 300),
+  app-bar:                  map.get($grey-palette, 100),
+  background:               map.get($grey-palette, 50),
+  hover:                    rgba(map.get($grey-palette, 900), 0.04),
+  card:                     map.get($grey-palette, 50),
+  dialog:                   map.get($grey-palette, 50),
+  disabled-button:          rgba(map.get($grey-palette, 900), 0.12),
+  raised-button:            map.get($grey-palette, 50),
+  focused-button:           rgba(map.get($grey-palette, 900), 0.12),
+  selected-button:          map.get($grey-palette, 300),
+  selected-disabled-button: map.get($grey-palette, 400),
+  disabled-button-toggle:   map.get($grey-palette, 200),
+  unselected-chip:          map.get($grey-palette, 300),
+  disabled-list-option:     map.get($grey-palette, 200),
+  tooltip:                  map.get($grey-palette, 700),
+);
+
+$background-dark: (
+  status-bar:               map.get($grey-palette, 900),
+  app-bar:                  map.get($grey-palette, 900),
+  background:               map.get($grey-palette, 900),
+  hover:                    rgba(map.get($grey-palette, 50), 0.04),
+  card:                     map.get($grey-palette, 800),
+  dialog:                   map.get($grey-palette, 800),
+  disabled-button:          rgba(map.get($grey-palette, 50), 0.12),
+  raised-button:            map.get($grey-palette, 800),
+  focused-button:           rgba(map.get($grey-palette, 50), 0.12),
+  selected-button:          map.get($grey-palette, 900),
+  selected-disabled-button: map.get($grey-palette, 800),
+  disabled-button-toggle:   map.get($grey-palette, 900),
+  unselected-chip:          map.get($grey-palette, 700),
+  disabled-list-option:     rgba(map.get($grey-palette, 50), 0.12),
+  tooltip:                  map.get($grey-palette, 700),
+);
+
+$foreground-light: (
+  base:                     map.get($grey-palette, 900),
+  divider:                  rgba(map.get($grey-palette, 900), 0.12),
+  dividers:                 rgba(map.get($grey-palette, 900), 0.12),
+  disabled:                 rgba(map.get($grey-palette, 900), 0.38),
+  disabled-button:          rgba(map.get($grey-palette, 900), 0.26),
+  disabled-text:            rgba(map.get($grey-palette, 900), 0.38),
+  elevation:                rgba(map.get($grey-palette, 900), 0.15),
+  hint-text:                rgba(map.get($grey-palette, 900), 0.38),
+  secondary-text:           rgba(map.get($grey-palette, 900), 0.54),
+  icon:                     rgba(map.get($grey-palette, 900), 0.54),
+  icons:                    rgba(map.get($grey-palette, 900), 0.54),
+  text:                     rgba(map.get($grey-palette, 900), 0.87),
+  slider-min:               rgba(map.get($grey-palette, 900), 0.87),
+  slider-off:               rgba(map.get($grey-palette, 900), 0.26),
+  slider-off-active:        rgba(map.get($grey-palette, 900), 0.38),
+);
+
+$foreground-dark: (
+  base:                     map.get($grey-palette, 50),
+  divider:                  rgba(map.get($grey-palette, 50), 0.12),
+  dividers:                 rgba(map.get($grey-palette, 50), 0.12),
+  disabled:                 rgba(map.get($grey-palette, 50), 0.5),
+  disabled-button:          rgba(map.get($grey-palette, 50), 0.3),
+  disabled-text:            rgba(map.get($grey-palette, 50), 0.5),
+  elevation:                rgba(map.get($grey-palette, 900), 0.15),
+  hint-text:                rgba(map.get($grey-palette, 50), 0.5),
+  secondary-text:           rgba(map.get($grey-palette, 50), 0.7),
+  icon:                     map.get($grey-palette, 50),
+  icons:                    map.get($grey-palette, 50),
+  text:                     map.get($grey-palette, 50),
+  slider-min:               map.get($grey-palette, 50),
+  slider-off:               rgba(map.get($grey-palette, 50), 0.3),
+  slider-off-active:        rgba(map.get($grey-palette, 50), 0.3),
+);

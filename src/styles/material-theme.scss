@@ -1,0 +1,115 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@import '../../node_modules/modern-css-reset/dist/reset';
+@import 'app-theme';
+@import 'fonts';
+@import 'icons';
+
+@include mat.core();
+
+$primary-palette: (
+  50: map.get($theme, 50),
+  100: map.get($theme, 100),
+  200: map.get($theme, 200),
+  300: map.get($theme, 300),
+  400: map.get($theme, 400),
+  500: map.get($theme, 500),
+  600: map.get($theme, 600),
+  700: map.get($theme, 700),
+  800: map.get($theme, 800),
+  900: map.get($theme, 900),
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(white, 0.92),
+    600: rgba(white, 0.92),
+    700: rgba(white, 0.92),
+    800: rgba(white, 0.92),
+    900: rgba(white, 0.92),
+  ),
+);
+
+$accent-palette: (
+  50: map.get($alt, 50),
+  100: map.get($alt, 100),
+  200: map.get($alt, 200),
+  300: map.get($alt, 300),
+  400: map.get($alt, 400),
+  500: map.get($alt, 500),
+  600: map.get($alt, 600),
+  700: map.get($alt, 700),
+  800: map.get($alt, 800),
+  900: map.get($alt, 900),
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(black, 0.87),
+    600: rgba(white, 0.92),
+    700: rgba(white, 0.92),
+    800: rgba(white, 0.92),
+    900: rgba(white, 0.92),
+  ),
+);
+
+$project-primary: mat.define-palette($primary-palette);
+$project-accent: mat.define-palette($accent-palette, 300, 100, 400);
+$project-warn: mat.define-palette(mat.$red-palette);
+
+$project-theme-dark: mat.define-dark-theme(
+  (
+    color: (
+      primary: $project-primary,
+      accent: $project-accent,
+      warn: $project-warn,
+    ),
+  )
+);
+
+$project-theme-light: mat.define-light-theme(
+  (
+    color: (
+      primary: $project-primary,
+      accent: $project-accent,
+      warn: $project-warn,
+    ),
+  )
+);
+
+$material-theme-overrides: (
+  color: (
+    foreground: $foreground-light,
+    background: $background-light,
+  ),
+);
+
+$project-theme: map.deep-merge($project-theme-light, $material-theme-overrides);
+@include mat.all-component-themes($project-theme);
+
+@media (prefers-color-scheme: dark) {
+  $material-theme-overrides: (
+    color: (
+      foreground: $foreground-dark,
+      background: $background-dark,
+    ),
+  );
+
+  $project-theme: map.deep-merge($project-theme-dark, $material-theme-overrides);
+  @include mat.all-component-colors($project-theme);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+}
