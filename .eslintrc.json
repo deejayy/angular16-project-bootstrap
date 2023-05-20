@@ -1,0 +1,251 @@
+{
+  "root": true,
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "airbnb-base",
+        "airbnb-typescript/base",
+        "plugin:@angular-eslint/ng-cli-compat",
+        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+        "plugin:@angular-eslint/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@typescript-eslint/strict",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "plugins": ["eslint-plugin-no-null"],
+      "rules": {
+        "indent": ["off"],
+        "@typescript-eslint/indent": ["off"],
+        "function-paren-newline": "off",
+        "import/no-extraneous-dependencies": ["off"],
+        "@angular-eslint/component-class-suffix": ["error", { "suffixes": ["Component", "Modal", "Page"] }],
+        "@angular-eslint/component-max-inline-declarations": "error",
+        "@angular-eslint/contextual-decorator": "error",
+        "@angular-eslint/contextual-lifecycle": "error",
+        "@angular-eslint/directive-class-suffix": "error",
+        "@angular-eslint/no-attribute-decorator": "error",
+        "@angular-eslint/no-conflicting-lifecycle": "error",
+        "@angular-eslint/no-empty-lifecycle-method": "error",
+        "@angular-eslint/no-forward-ref": "error",
+        "@angular-eslint/no-host-metadata-property": "error",
+        "@angular-eslint/no-input-prefix": ["error", { "prefixes": ["on"] }],
+        "@angular-eslint/no-input-rename": "error",
+        "@angular-eslint/no-inputs-metadata-property": "error",
+        "@angular-eslint/no-lifecycle-call": "error",
+        "@angular-eslint/no-output-native": "error",
+        "@angular-eslint/no-output-on-prefix": "error",
+        "@angular-eslint/no-output-rename": "error",
+        "@angular-eslint/no-outputs-metadata-property": "error",
+        "@angular-eslint/no-pipe-impure": "error",
+        "@angular-eslint/no-queries-metadata-property": "error",
+        "@angular-eslint/pipe-prefix": "error",
+        "@angular-eslint/prefer-output-readonly": "error",
+        "@angular-eslint/relative-url-prefix": "error",
+        "@angular-eslint/sort-ngmodule-metadata-arrays": "error",
+        "@angular-eslint/use-component-view-encapsulation": "error",
+        "@angular-eslint/use-injectable-provided-in": "off",
+        "@angular-eslint/use-lifecycle-interface": "error",
+        "@angular-eslint/use-pipe-transform-interface": "error",
+        "@typescript-eslint/lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+        "@typescript-eslint/no-extraneous-class": ["error", { "allowEmpty": true, "allowStaticOnly": true }],
+        "@typescript-eslint/no-misused-promises": ["error", { "checksVoidReturn": false }],
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/unbound-method": ["off"],
+        "@typescript-eslint/no-invalid-void-type": "off",
+        "import/no-cycle": ["error", { "maxDepth": 2 }],
+        "import/no-import-module-exports": "off",
+        "import/prefer-default-export": "off",
+        "class-methods-use-this": ["off"],
+        "no-confusing-arrow": "off",
+        "no-param-reassign": ["error", { "props": false }],
+        "no-plusplus": "off",
+        "no-restricted-globals": "off",
+        "no-return-assign": "off",
+        "no-underscore-dangle": "off",
+        "object-curly-newline": ["off"],
+        "padded-blocks": "off",
+        "radix": ["error", "as-needed"],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/prefer-on-push-component-change-detection": "error",
+        "@typescript-eslint/adjacent-overload-signatures": "off",
+        "@typescript-eslint/array-type": [
+          "error",
+          {
+            "default": "array"
+          }
+        ],
+        "@typescript-eslint/await-thenable": "off",
+        "no-console": ["error", { "allow": ["warn", "error"] }],
+        "@typescript-eslint/consistent-type-assertions": "off",
+        "@typescript-eslint/consistent-type-definitions": "off",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "explicit",
+            "overrides": {
+              "constructors": "off",
+              "accessors": "off"
+            }
+          }
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/member-ordering": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": ["variableLike"],
+            "format": ["camelCase", "UPPER_CASE"],
+            "leadingUnderscore": "allow"
+          }
+        ],
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/no-for-in-array": "error",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-require-imports": "error",
+        "@typescript-eslint/no-this-alias": "error",
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
+        "@typescript-eslint/no-unnecessary-qualifier": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-var-requires": "error",
+        "@typescript-eslint/prefer-enum-initializers": "error",
+        "@typescript-eslint/prefer-for-of": "off",
+        "@typescript-eslint/prefer-namespace-keyword": "off",
+        "@typescript-eslint/promise-function-async": "off",
+        "@typescript-eslint/restrict-plus-operands": "error",
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/type-annotation-spacing": "off",
+        "arrow-body-style": "off",
+        "arrow-parens": ["error", "always"],
+        "brace-style": ["error", "1tbs"],
+        "comma-dangle": [
+          "error",
+          {
+            "objects": "always-multiline",
+            "arrays": "always-multiline",
+            "functions": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline"
+          }
+        ],
+        "complexity": [
+          "error",
+          {
+            "max": 6
+          }
+        ],
+        "default-case": "off",
+        "import/no-default-export": "error",
+        "eol-last": ["error", "always"],
+        "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+        "id-denylist": "error",
+        "import/no-unassigned-import": "off",
+        "import/order": "off",
+        "jsdoc/check-alignment": "off",
+        "jsdoc/newline-after-description": "off",
+        "operator-linebreak": "off",
+        "implicit-arrow-linebreak": "off",
+        "linebreak-style": ["error", "unix"],
+        "max-len": [
+          "error",
+          {
+            "code": 140,
+            "ignorePattern": "^import .*"
+          }
+        ],
+        "max-lines-per-function": [
+          "error",
+          {
+            "max": 75
+          }
+        ],
+        "no-constant-condition": "error",
+        "no-control-regex": "error",
+        "no-duplicate-case": "error",
+        "no-extra-semi": "error",
+        "no-invalid-regexp": "error",
+        "no-invalid-this": "off",
+        "no-magic-numbers": ["error", { "ignore": [0, 1] }],
+        "no-multi-assign": "error",
+        "no-multi-str": "off",
+        "no-multiple-empty-lines": "error",
+        "no-null/no-null": "off",
+        "no-octal": "error",
+        "no-octal-escape": "error",
+        "no-redeclare": "error",
+        "no-regex-spaces": "error",
+        "no-restricted-syntax": ["error", "ForInStatement"],
+        "no-sparse-arrays": "error",
+        "no-template-curly-in-string": "error",
+        "no-unused-vars": [
+          "error",
+          {
+            "args": "after-used"
+          }
+        ],
+        "no-void": "off",
+        "no-warning-comments": [
+          "error",
+          {
+            "terms": ["BUG", "HACK", "FIXME", "LATER", "LATER2", "TODO", "Lorem"],
+            "location": "anywhere"
+          }
+        ],
+        "no-with": "error",
+        "object-shorthand": "off",
+        "prefer-template": "error",
+        "prefer-arrow-callback": "error",
+        "space-before-function-paren": "off",
+        "valid-typeof": [
+          "error",
+          {
+            "requireStringLiterals": false
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "rules": {
+        "@angular-eslint/template/accessibility-elements-content": "error",
+        "@angular-eslint/template/accessibility-label-has-associated-control": "error",
+        "@angular-eslint/template/accessibility-role-has-required-aria": "error",
+        "@angular-eslint/template/accessibility-table-scope": "error",
+        "@angular-eslint/template/accessibility-valid-aria": "error",
+        "@angular-eslint/template/banana-in-box": "error",
+        "@angular-eslint/template/conditional-complexity": "error",
+        "@angular-eslint/template/cyclomatic-complexity": ["error", { "maxComplexity": 10 }],
+        "@angular-eslint/template/eqeqeq": "error",
+        "@angular-eslint/template/mouse-events-have-key-events": "error"
+      }
+    }
+  ]
+}
