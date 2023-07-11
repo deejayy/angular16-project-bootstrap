@@ -10,8 +10,6 @@
       "extends": [
         "airbnb-base",
         "airbnb-typescript/base",
-        "plugin:@angular-eslint/ng-cli-compat",
-        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
         "plugin:@angular-eslint/recommended",
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
@@ -235,11 +233,6 @@
       "files": ["*.html"],
       "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {
-        "@angular-eslint/template/accessibility-elements-content": "error",
-        "@angular-eslint/template/accessibility-label-has-associated-control": "error",
-        "@angular-eslint/template/accessibility-role-has-required-aria": "error",
-        "@angular-eslint/template/accessibility-table-scope": "error",
-        "@angular-eslint/template/accessibility-valid-aria": "error",
         "@angular-eslint/template/banana-in-box": "error",
         "@angular-eslint/template/conditional-complexity": "error",
         "@angular-eslint/template/cyclomatic-complexity": ["error", { "maxComplexity": 10 }],
