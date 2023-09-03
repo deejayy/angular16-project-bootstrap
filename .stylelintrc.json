@@ -63,7 +63,6 @@
     "no-descending-specificity": true,
     "no-duplicate-at-import-rules": true,
     "no-duplicate-selectors": true,
-    "no-extra-semicolons": true,
     "no-invalid-double-slash-comments": true,
     "scss/dollar-variable-empty-line-before": null,
     "property-no-unknown": [
